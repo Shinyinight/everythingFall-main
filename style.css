@@ -1,0 +1,71 @@
+
+body{
+     margin: 0;
+     padding: 0;
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     animation: bg cubic-bezier(0.075, 0.82, 0.165, 1) 10s .5s infinite alternate;
+     height: 100vh;
+     width: 100vw;
+
+}
+*{
+     object-fit:contain;
+}
+canvas{
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100vh;
+     width: 100vw;
+     background-color:#fff;
+}
+
+@keyframes bg{
+     0%, 50%{
+          /* background-color:#fff; */
+          filter: invert(0);
+     }
+     100%{
+          /* background-color:#000; */
+          filter: invert(1);
+          
+     }
+}
+
+.wrapper{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align:center;
+     transition:.3s linear ;
+     width: min-content;
+     min-width: 80%;
+}
+.wrapper.active{
+     transform:scale(0);
+     opacity:0;
+}
+
+button {
+     background-color: #333;
+     border: 0;
+     color: #fff;
+     padding: 14px 30px;
+     font-size: max(17px, 1.5vw);
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     border-radius: 8px;
+     cursor: pointer;
+     transition:.3s  linear ;
+}
+button:active {
+     transform:scale(1.2)
+}
+h1{
+     color:#333;
+     font-size: max(22px, 3vw);
+     margin-top: 0;
+}
+
+
